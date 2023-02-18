@@ -6,7 +6,34 @@
 </head>
 <body>
   <script>
-    // Add Javascript here
+    // Array to store RPS options
+    const arrayRPS = ["Rock", "Paper", "Scissors"];
+
+    // Function to return 'Rock', 'Paper', or 'Scissors' from the computer
+    function getComputerChoice(arr) {
+        const computerChoice = arr[Math.floor(Math.random() * arr.length)];
+        return computerChoice;
+    }
+
+    // Function to play a single round of RPS
+    function playRound(playerSelection, computerSelection) {
+        computerSelection = computerSelection.toLowerCase();
+        playerSelection = playerSelection.toLowerCase();
+
+        if (playerSelection === computerSelection) {
+            return "It's a draw!";
+        } else if (playerSelection === "Paper" && computerSelection === "Rock" || playerSelection === "Rock" && computerSelection === "Scissors" || playerSelection === "Scissors" && computerSelection === "Paper") {
+            return "You won!";
+        } else {
+            return "You lose!";
+        }
+    }
+
+    const playerSelection = "rock"
+    const computerSelection = getComputerChoice(arrayRPS);
+    console.log(playRound(playerSelection, computerSelection));
+
+
   </script>
 </body>
 </html>
