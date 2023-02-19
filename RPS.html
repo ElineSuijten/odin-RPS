@@ -31,7 +31,7 @@
         // Function to play a single round of RPS
         function playRound(playerSelection, computerSelection) {
             if (playerSelection === computerSelection) {
-                return "It's a tie!";
+                return "This round is a tie!";
             } else if (playerSelection === "paper" && computerSelection === "rock") {
               ++playerScore;
                 return "You won! Paper covers rock!";
@@ -43,10 +43,20 @@
               return "You won! Scissors cut paper!"
             } else {
                 ++computerScore;
-                return "You lose!";
+                return "You lost this round!";
             }
           }
-    }}
+    }
+    if (playerScore > computerScore) {
+      return "You are the winner!!"
+    }
+    else if (playerScore < computerScore) {
+      return "You lost to the computer!"
+    }
+    else {
+      return "It's a tie with the computer!"
+    }
+  }
 
   console.log(game());
 
