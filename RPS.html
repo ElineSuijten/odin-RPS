@@ -7,7 +7,7 @@
 <body>
   <script>
     // Array to store RPS options
-    const arrayRPS = ["rock", "paper", "scissors"];;
+    const arrayRPS = ["rock", "paper", "scissors"];
 
     // Variable for player and computer score
     let playerScore = 0;
@@ -15,8 +15,8 @@
 
 
     // Function to return 'Rock', 'Paper', or 'Scissors' from the computer
-    function getComputerChoice(arr) {
-        const computerChoice = arr[Math.floor(Math.random() * arr.length)];
+    function getComputerChoice() {
+        const computerChoice = arrayRPS[Math.floor(Math.random() * arrayRPS.length)];
         return computerChoice;
     }
 
@@ -34,16 +34,16 @@
                 return "This round is a tie!";
             } else if (playerSelection === "paper" && computerSelection === "rock") {
               ++playerScore;
-                return "You won! Paper covers rock!";
+                return "You won this round! Paper covers rock!";
             } else if (playerSelection  === "rock" && computerSelection === "scissors") {
               ++playerScore;
-              return "You won! Rocks crushes scissors!"
+              return "You won this round! Rocks crushes scissors!"
             } else if (playerSelection === "scissors" && computerSelection === "paper") {
               ++playerScore;
-              return "You won! Scissors cut paper!"
+              return "You won this round! Scissors cut paper!"
             } else {
                 ++computerScore;
-                return "You lost this round!";
+                return `You lost this round, ${computerSelection} beats ${playerSelection}!`;
             }
           }
     }
@@ -51,7 +51,7 @@
       return "You are the winner!!"
     }
     else if (playerScore < computerScore) {
-      return "You lost to the computer!"
+      return "You lost to the computer! Game over!"
     }
     else {
       return "It's a tie with the computer!"
@@ -59,9 +59,6 @@
   }
 
   console.log(game());
-
-
-
 
   </script>
 </body>
