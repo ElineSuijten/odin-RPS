@@ -23,7 +23,7 @@
     // Function to play five rounds and reports the winner
     function game() {
       for (let i = 0; i < 5; i++) {
-        const computerSelection = getComputerChoice(arrayRPS);
+        let computerSelection = getComputerChoice(arrayRPS);
         const playerSelection = prompt("Choose 'rock', 'paper', or 'scissors'").toLowerCase();
         console.log(playRound(playerSelection, computerSelection));
         
@@ -43,7 +43,8 @@
               return "You won this round! Scissors cut paper!"
             } else {
                 ++computerScore;
-                return `You lost this round, ${computerSelection} beats ${playerSelection}!`;
+                computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
+                return `You lost this round! ${computerSelection} beats ${playerSelection}!`;
             }
           }
     }
