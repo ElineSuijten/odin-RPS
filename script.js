@@ -18,13 +18,11 @@ function clickFunction(e) {
     document.getElementById('roundresult').innerHTML = playRound(playerSelection, computerSelection);
     document.getElementById('score').innerHTML = `Score: ${playerScore} - ${computerScore}`
     if (playerScore === 5) {
-        document.getElementById('endscore').innerHTML = `Game over: You won with ${playerScore} - ${computerScore}`
+        document.getElementById('endscore').innerHTML = `Game over: You won!!`
         disableButtons()
-        document.getElementById('startover').style = "display: block;";
     } else if (computerScore === 5) {
-        document.getElementById('endscore').innerHTML = `Game over: You lose with ${playerScore} - ${computerScore}`
+        document.getElementById('endscore').innerHTML = `Game over: You've lost!`
         disableButtons()
-        document.getElementById('startover').style = "display: block;";
     }
 }
 
