@@ -1,6 +1,7 @@
 body {
     background-color:rgb(28, 27, 27);
     color: white;
+    font-family: helvetica, arial, serif;
 }
 
 h1, h2, h3 {
@@ -12,17 +13,23 @@ h1, h2, h3 {
 
 h1 {
     font-size: 50px;
+    font-weight: 900;
+    text-shadow: 2px 2px #ff0077;
 }
 
 h2 {
     font-size: 30px;
 }
+
 .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#rockButton, #paperButton, #scissorsButton {
+    margin: 15px;
+}
 .footer {
     position: fixed;
     display: flex;
