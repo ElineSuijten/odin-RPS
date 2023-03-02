@@ -16,6 +16,7 @@ function clickFunction(e) {
     const playerSelectionId = e.target.id;
     const playerSelection = playerSelectionId.slice(0, -6);
     playRound(playerSelection, computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
 }
 
 // Function to return 'Rock', 'Paper', or 'Scissors' from the computer
@@ -25,13 +26,11 @@ function getComputerChoice() {
 }
 
 
-
 // Function to play five rounds and reports the winner
-function game() {
+/*function game() {
   for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerSelection, computerSelection)); 
+    console.log(playRound(playerSelection, computerSelection)); */
 
-    
 
     // Function to play a single round of RPS
     function playRound(playerSelection, computerSelection) {
@@ -53,6 +52,8 @@ function game() {
         }
       }
 
+      /*
+
 
 }
 if (playerScore > computerScore) {
@@ -66,6 +67,6 @@ else {
 }
 }
 
-console.log(game(playerSelection, computerSelection));
-
+console.log(game());
+*/
 
