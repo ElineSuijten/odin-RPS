@@ -34,16 +34,12 @@ function disableButtons() {
     scissorsButton.disabled = true;
 }
 
-
-// Function to return 'Rock', 'Paper', or 'Scissors' from the computer
 function getComputerChoice() {
     const computerChoice = arrayRPS[Math.floor(Math.random() * arrayRPS.length)];
     return computerChoice;
 }
 
 
-
-// Function to play a single round of RPS
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "This round is a tie!";
@@ -63,24 +59,4 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
-// Function to play five rounds and reports the winner
-/*function game() {
-  for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerSelection, computerSelection)); 
-
-}
-if (playerScore > computerScore) {
-  return "You are the winner!!"
-}
-else if (playerScore < computerScore) {
-  return "You lost to the computer! Game over!"
-}
-else {
-  return "It's a tie with the computer!"
-}
-}
-
-console.log(game());
-*/
 
