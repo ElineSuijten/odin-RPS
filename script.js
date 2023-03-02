@@ -17,7 +17,14 @@ function clickFunction(e) {
     const playerSelection = playerSelectionId.slice(0, -6);
     document.getElementById('roundresult').innerHTML = playRound(playerSelection, computerSelection);
     document.getElementById('score').innerHTML = `Score: ${playerScore} - ${computerScore}`
+    if (playerScore === 5) {
+        document.getElementById('endscore').innerHTML = `Game over: You won with ${playerScore} - ${computerScore}`
+    } else if (computerScore === 5) {
+        document.getElementById('endscore').innerHTML = `Game over: You lose with ${playerScore} - ${computerScore}`
+    }
 }
+
+
 
 // Function to return 'Rock', 'Paper', or 'Scissors' from the computer
 function getComputerChoice() {
