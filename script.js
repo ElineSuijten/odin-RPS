@@ -15,7 +15,7 @@ function clickFunction(e) {
     const computerSelection = getComputerChoice(arrayRPS);
     const playerSelectionId = e.target.id;
     const playerSelection = playerSelectionId.slice(0, -6);
-    document.querySelector('.results').innerHTML = playRound(playerSelection, computerSelection);
+    document.getElementById('roundresult').innerHTML = playRound(playerSelection, computerSelection);
 }
 
 // Function to return 'Rock', 'Paper', or 'Scissors' from the computer
