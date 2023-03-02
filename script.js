@@ -16,6 +16,7 @@ function clickFunction(e) {
     const playerSelectionId = e.target.id;
     const playerSelection = playerSelectionId.slice(0, -6);
     document.getElementById('roundresult').innerHTML = playRound(playerSelection, computerSelection);
+    document.getElementById('score').innerHTML = `Score: ${playerScore} - ${computerScore}`
 }
 
 // Function to return 'Rock', 'Paper', or 'Scissors' from the computer
@@ -23,6 +24,8 @@ function getComputerChoice() {
     const computerChoice = arrayRPS[Math.floor(Math.random() * arrayRPS.length)];
     return computerChoice;
 }
+
+
 
 // Function to play a single round of RPS
 function playRound(playerSelection, computerSelection) {
