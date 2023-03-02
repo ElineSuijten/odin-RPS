@@ -19,11 +19,20 @@ function clickFunction(e) {
     document.getElementById('score').innerHTML = `Score: ${playerScore} - ${computerScore}`
     if (playerScore === 5) {
         document.getElementById('endscore').innerHTML = `Game over: You won with ${playerScore} - ${computerScore}`
+        disableButtons()
+        document.getElementById('startover').style = "display: block;";
     } else if (computerScore === 5) {
         document.getElementById('endscore').innerHTML = `Game over: You lose with ${playerScore} - ${computerScore}`
+        disableButtons()
+        document.getElementById('startover').style = "display: block;";
     }
 }
 
+function disableButtons() {
+    rockButton.disabled = true;
+    paperButton.disabled = true;
+    scissorsButton.disabled = true;
+}
 
 
 // Function to return 'Rock', 'Paper', or 'Scissors' from the computer
