@@ -25,35 +25,31 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+// Function to play a single round of RPS
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return "This round is a tie!";
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+        ++playerScore;
+        return "You won this round! Paper covers rock!";
+    } else if (playerSelection  === "rock" && computerSelection === "scissors") {
+        ++playerScore;
+        return "You won this round! Rocks crushes scissors!"
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        ++playerScore;
+        return "You won this round! Scissors cut paper!"
+    } else {
+        ++computerScore;
+        computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
+        return `You lost this round! ${computerSelection} beats ${playerSelection}!`;
+    }
+}
+
 
 // Function to play five rounds and reports the winner
 /*function game() {
   for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerSelection, computerSelection)); */
-
-
-    // Function to play a single round of RPS
-    function playRound(playerSelection, computerSelection) {
-        if (playerSelection === computerSelection) {
-            return "This round is a tie!";
-        } else if (playerSelection === "paper" && computerSelection === "rock") {
-          ++playerScore;
-            return "You won this round! Paper covers rock!";
-        } else if (playerSelection  === "rock" && computerSelection === "scissors") {
-          ++playerScore;
-          return "You won this round! Rocks crushes scissors!"
-        } else if (playerSelection === "scissors" && computerSelection === "paper") {
-          ++playerScore;
-          return "You won this round! Scissors cut paper!"
-        } else {
-            ++computerScore;
-            computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
-            return `You lost this round! ${computerSelection} beats ${playerSelection}!`;
-        }
-      }
-
-      /*
-
+    console.log(playRound(playerSelection, computerSelection)); 
 
 }
 if (playerScore > computerScore) {
