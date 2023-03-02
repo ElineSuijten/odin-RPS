@@ -14,7 +14,7 @@ h1, h2, h3 {
 h1 {
     font-size: 50px;
     font-weight: 900;
-    text-shadow: 2px 2px #ff0077;
+    text-shadow: 2px 2px #ffc400;
 }
 
 h2 {
@@ -27,9 +27,41 @@ h2 {
     justify-content: center;
 }
 
-#rockButton, #paperButton, #scissorsButton {
+
+.button{
     margin: 15px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid black;
 }
+
+.button:hover {background-color: #f3cf00}
+
+.button:active {
+  background-color: #f3cf00;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+
+#rockButton {
+    background-image: url("rock.png");
+    background-size: 80%;
+}
+
+#paperButton {
+    background-image: url("paper.png");
+    background-size: 80%;
+}
+
+#scissorsButton {
+    background-image: url("scissors.png");
+    background-size: 90%;
+}
+
 .footer {
     position: fixed;
     display: flex;
