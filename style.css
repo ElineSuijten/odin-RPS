@@ -54,15 +54,18 @@ h2 {
     background-color:#e48d0b;
 }
 
+
 .button1:hover {
     background-color: #f3cf00;
     transform: scale(1.1);
 }
 
+
 .button1:active {
-  background-color: #f3cf00;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);}
+    background-color: #f3cf00;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);}
+  
 
 #compButton {
     pointer-events: none;
@@ -139,4 +142,5 @@ h2 {
     justify-content: center;
     color: white;
     bottom: 0;
+    position: fixed;
   }
