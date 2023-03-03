@@ -7,6 +7,8 @@ const rockButton = document.getElementById('rockButton');
 const paperButton = document.getElementById('paperButton');
 const scissorsButton = document.getElementById('scissorsButton');
 
+const compButton = document.getElementById('compButton');
+
 rockButton.addEventListener("click", clickFunction);
 paperButton.addEventListener("click", clickFunction);
 scissorsButton.addEventListener("click", clickFunction);
