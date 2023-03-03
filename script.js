@@ -13,17 +13,13 @@ rockButton.addEventListener("click", clickFunction);
 paperButton.addEventListener("click", clickFunction);
 scissorsButton.addEventListener("click", clickFunction);
 
-rockButton.addEventListener("click", clickFunction);
-paperButton.addEventListener("click", clickFunction);
-scissorsButton.addEventListener("click", clickFunction);
-
-
 function clickFunction(e) {
     const computerSelection = getComputerChoice(arrayRPS);
     const playerSelectionId = e.target.id;
     const playerSelection = playerSelectionId.slice(0, -6);
     document.getElementById('roundresult').innerHTML = playRound(playerSelection, computerSelection);
     document.getElementById('score').innerHTML = `Score: ${playerScore} - ${computerScore}`
+    toggleFunction();
     if (computerSelection === 'rock') {
         document.getElementById('compButton').style = "background-image: url('rock.png'); background-size: 80%;"
     } else if (computerSelection === 'paper') {
@@ -39,6 +35,10 @@ function clickFunction(e) {
         document.getElementById('endscore').innerHTML = `Game over: You've lost!`
         disableButtons()
     }
+}
+
+function toggleFunction () {
+    document.getElementById('compButton').classList.toggle("button3");
 }
 
 
