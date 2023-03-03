@@ -19,7 +19,7 @@ function clickFunction(e) {
     const playerSelection = playerSelectionId.slice(0, -6);
     document.getElementById('roundresult').innerHTML = playRound(playerSelection, computerSelection);
     document.getElementById('score').innerHTML = `Score: ${playerScore} - ${computerScore}`
-    toggleFunction();
+    changeColorButton();
     if (computerSelection === 'rock') {
         document.getElementById('compButton').style = "background-image: url('rock.png'); background-size: 80%;"
     } else if (computerSelection === 'paper') {
@@ -27,7 +27,14 @@ function clickFunction(e) {
     } else {
         document.getElementById('compButton').style = "background-image: url('scissors.png'); background-size: 90%;"
     }
+   endGame();
+}
 
+function changeColorButton () {
+    document.getElementById('compButton').classList.toggle("button3");
+}
+
+function endGame () {
     if (playerScore === 5) {
         document.getElementById('endscore').innerHTML = `Game over: You won!!`
         disableButtons()
@@ -37,20 +44,15 @@ function clickFunction(e) {
     }
 }
 
-function toggleFunction () {
-    document.getElementById('compButton').classList.toggle("button3");
-}
-
-
 function disableButtons() {
     rockButton.disabled = true;
-    document.getElementById('rockButton').style = "pointer-events: none;"
+    document.getElementById('rockButton').style = "pointer-events: none; background-color: grey;"
     paperButton.disabled = true;
-    document.getElementById('paperButton').style = "pointer-events: none;"
+    document.getElementById('paperButton').style = "pointer-events: none; background-color: grey;"
     scissorsButton.disabled = true;
-    document.getElementById('scissorsButton').style = "pointer-events: none;"
+    document.getElementById('scissorsButton').style = "pointer-events: none; background-color: grey;"
+    document.getElementById('compButton').style = "background-color: grey;"
 }
-
 
 function getComputerChoice() {
     const computerChoice = arrayRPS[Math.floor(Math.random() * arrayRPS.length)];
