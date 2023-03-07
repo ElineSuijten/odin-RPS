@@ -1,5 +1,5 @@
 # odin-RPS
-For this project I created a rock paper and scissors game!
+For this project I created a rock paper and scissors game! This is my first JavaScript project build from scratch.
 
 ## Instructions
 Part 1: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors
